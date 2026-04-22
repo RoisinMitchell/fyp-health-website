@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
         <p class="eyebrow">Stage 02 | Detecting Health Issues</p>
         <h1>A CNN-Based Web Tool for Common Skin Condition Detection</h1>
         <p class="student-name">Fionn Grant O&#39;Sullivan</p>
-        <p class="lede">A web-based screening concept that uses computer vision to classify common skin conditions and support earlier follow-up.</p>
+        <p class="lede">A web application in which an image can be uploaded to a machine learning model and receive the top 5 most likely common skin conditions that match the lesion present in the input image. Complete with explainability through heatmap generation.</p>
         <div class="project-actions">
           <a class="button button-primary" href="../index.html#detecting-health-issues">Back to category</a>
           <a class="button button-secondary" href="../index.html">All projects</a>
@@ -49,12 +49,12 @@
       <div class="section-heading">
         <p class="eyebrow">Project Snapshot</p>
         <h2>Exploring image-based early screening</h2>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This placeholder summary can later be updated with model details, evaluation notes, and responsible-use considerations.</p>
+        <p class="section-text">A web application developed with an aim toward dermatological accessibility issues in mind. Upon opening the application, the user will be able to upload an image of a skin lesion they are struggling with. Through the simple click of a button, the user will receive an analysis of the common conditions the lesion is most likely to belong to.<br><br>At the heart of the application is the convolutional neural network (CNN) algorithm. This was trained on a vast dataset of images which were procured to imitate smartphone-style photo conditions, rather than being taken with a dermatoscope, which is a specialised dermatological tool used to take extremely high-quality photos of skin lesions.<br><br>Many ML algorithms which seek to bridge the gap in urgent dermatology access are trained using these high-quality, dermatoscope-captured images. However, this is counter-intuitive, as dermatoscopes are expensive and require extensive training to use. An algorithm which focuses on images at a distance and quality that could be captured with a smartphone is considerably more feasible than one which is trained on images captured with a relatively inaccessible tool. The application is a concept which could be deployed as a preliminary support and screening tool for those affected by excessively long dermatologist waiting lists.<br><br>The application possesses a graph that accompanies the top 5 most likely results succeeding the input of the image, as well as a Gradient-weighted Class Activation Mapping (Grad-CAM) based heatmap, depicting the areas of the input image that factored the most into the model's final decision. Many tools like this concept are not supported by a component which explains the model's decisions. This was added to improve the trustworthiness in what was created to be an explainable, non-specialist, clinical support tool. </p>
       </div>
       <div class="detail-grid">
-        <article class="detail-item"><h3>Focus</h3><p>Convolutional neural networks for identifying common skin-condition patterns in images.</p></article>
-        <article class="detail-item"><h3>Audience</h3><p>Users and clinicians interested in accessible digital tools for earlier health awareness.</p></article>
-        <article class="detail-item"><h3>Demo Day Angle</h3><p>A practical look at the web workflow, predictions, and how the interface presents screening results clearly.</p></article>
+        <article class="detail-item"><h3>Focus</h3><p>Convolutional neural networks for identifying common skin condition patterns in images.</p></article>
+        <article class="detail-item"><h3>Audience</h3><p>Individuals without specialist dermatological access who require preliminary screening support.  </p></article>
+        <article class="detail-item"><h3>Demo</h3><p>A demonstration of the application's image analysis capabilities with a group of images. </p></article>
       </div>
     </section>
   </main>

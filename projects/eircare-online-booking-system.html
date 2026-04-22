@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
         <p class="eyebrow">Stage 04 | Care Access &amp; Coordination</p>
         <h1>Eircare: Online Booking System for General Practitioners</h1>
         <p class="student-name">Caylum Hurley</p>
-        <p class="lede">A streamlined booking experience designed to make GP appointment scheduling clearer, faster, and easier for patients.</p>
+        <p class="lede">Eircare is a full-stack GP appointment booking platform built for the Irish healthcare context. Patients can search for nearby doctors, book in-person or virtual consultations, and manage their appointments, while doctors control their availability and GPs can claim verified practice profiles imported directly from the HSE database.</p>
         <div class="project-actions">
           <a class="button button-primary" href="../index.html#care-access-coordination">Back to category</a>
           <a class="button button-secondary" href="../index.html">All projects</a>
@@ -49,12 +49,12 @@
       <div class="section-heading">
         <p class="eyebrow">Project Snapshot</p>
         <h2>Reducing friction in appointment booking</h2>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This placeholder summary can later be updated with service goals, design process, and final implementation notes.</p>
+        <p class="section-text">Eircare addresses a real gap in Irish primary care access: the lack of a unified, modern booking system for GP practices. The platform supports three distinct user roles: patient, doctor, and admin, each with a tailored experience built around real workflows in the Irish healthcare system.<br><br>Patients register and can immediately search for GPs by location, with results ranked by proximity using haversine distance calculations powered by GeoTools and real-world coordinates sourced via the OpenStreetMap Nominatim geocoding API. Each doctor profile displays availability, consultation types, and virtual appointment support. Patients can book slots, request translator services, view their appointment calendar, and join virtual consultations directly in-browser via Jitsi Meet integration.<br><br>Doctors manage a granular weekly availability schedule: setting hours, marking breaks, and toggling virtual availability. They can view their upcoming appointments with full patient context. New GPs registering on the platform can claim unclaimed practice profiles that were bulk-imported from the HSE's official find-a-gp portal using a custom Python web scraper, giving the system a real dataset of Irish GP practices from day one.<br><br>Admins oversee doctor verification, reviewing and approving or rejecting registrations based on submitted credentials such as medical council numbers. This ensures only verified practitioners appear to patients.<br><br>The backend is built with Spring Boot and Java 21, secured by JWT-based authentication with role-level access control. The frontend is a React 19 SPA and Bootstrap for responsive UI. The entire stack is containerised with Docker Compose, with Nginx handling production routing.</p>
       </div>
       <div class="detail-grid">
-        <article class="detail-item"><h3>Focus</h3><p>Improving how patients book and manage GP appointments through a simple online flow.</p></article>
-        <article class="detail-item"><h3>Audience</h3><p>Patients and primary-care providers looking for a smoother scheduling experience.</p></article>
-        <article class="detail-item"><h3>Demo Day Angle</h3><p>A walkthrough of the booking journey, interface decisions, and the service touchpoints the system aims to improve.</p></article>
+        <article class="detail-item"><h3>Focus</h3><p>A location-aware, end-to-end GP appointment booking system tailored specifically to the Irish healthcare system, covering patient discovery, online booking, virtual consultations, and doctor verification.</p></article>
+        <article class="detail-item"><h3>Audience</h3><p>Irish patients seeking accessible GP booking, GPs looking to digitise their scheduling, and healthcare administrators managing practitioner verification.</p></article>
+        <article class="detail-item"><h3>Demo</h3><p>Live demonstration of a patient searching for a nearby GP by location, booking a virtual appointment, and joining a Jitsi video consultation, end-to-end in one flow.</p></article>
       </div>
     </section>
   </main>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
         <p class="eyebrow">Stage 05 | Supporting Healthcare Systems</p>
         <h1>Autonomous Contextual Bandit Optimisation of Medical RAG Pipelines for Resource-Constrained Rural Clinical Decision Support</h1>
         <p class="student-name">Michael Cronin</p>
-        <p class="lede">A decision-support research project exploring adaptive optimisation of medical RAG pipelines in low-resource clinical environments.</p>
+        <p class="lede">This project builds an autonomous medical QA system that learns the best retrieval strategy per query. Using a contextual bandit, it dynamically selects between keyword, semantic, and knowledge graph search, while a four-layer safety validator blocks unsafe outputs. It's designed for rural GPs and resource-constrained settings where fast, reliable decision support is essential.</p>
         <div class="project-actions">
           <a class="button button-primary" href="../index.html#supporting-healthcare-systems">Back to category</a>
           <a class="button button-secondary" href="../index.html">All projects</a>
@@ -49,12 +49,12 @@
       <div class="section-heading">
         <p class="eyebrow">Project Snapshot</p>
         <h2>Adaptive optimisation for clinical decision support</h2>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This placeholder summary can later be updated with the optimisation strategy, evaluation setup, and deployment context.</p>
+        <p class="section-text">Medical RAG systems usually commit to a single retrieval strategy, which rarely works well across the full range of clinical questions. A query about drug dosages, a symptom differential, and a guideline-based treatment question all benefit from different kinds of evidence. This project treats retrieval strategy selection as a learning problem rather than a fixed design choice.<br><br>At the core of the system is a LinUCB contextual bandit that picks between three retrieval arms for every query: a Fast arm using BM25, a Deep arm using a biomedical Sentence-BERT model, and a Graph arm running a Graph Attention Network trained on a UMLS subgraph of roughly 1.2 million nodes and 13 million edges. The bandit learns from a composite reward balancing guideline alignment, answer quality, latency, and safety. Alongside this, a four-layer safety validator checks outputs for contraindications and unsafe advice before anything reaches the user, with a kill-switch ensuring unsafe responses are never rewarded.<br><br>Evaluated on PubMedQA using Qwen2.5-14B-Instruct, the system reaches around 76% accuracy across 1,000 questions. The bandit converges strongly toward the Deep arm, which is itself evidence that the self-optimisation loop is working. The rural GP framing motivates the design constraints; budgets, safety-first reward shaping, explainable arm selection, while PubMedQA serves as the proof-of-architecture benchmark, with real GP deployment positioned as future work.</p>
       </div>
       <div class="detail-grid">
-        <article class="detail-item"><h3>Focus</h3><p>Improving medical retrieval-augmented generation pipelines with contextual bandit methods.</p></article>
-        <article class="detail-item"><h3>Audience</h3><p>Clinicians, researchers, and technical audiences interested in resource-aware AI decision support.</p></article>
-        <article class="detail-item"><h3>Demo Day Angle</h3><p>A research-focused overview of the pipeline, optimisation approach, and the rural clinical context motivating the work.</p></article>
+        <article class="detail-item"><h3>Focus</h3><p>Building a self-optimising, self-protecting medical RAG pipeline that learns which retrieval strategy to use for each query while enforcing hard safety guarantees.</p></article>
+        <article class="detail-item"><h3>Audience</h3><p>Clinicians working in resource-constrained settings, AI researchers in medical NLP, and anyone interested in safe, adaptive retrieval systems.</p></article>
+        <article class="detail-item"><h3>Demo</h3><p>A live walkthrough of the demo UI where visitors can enter medical questions and watch the bandit select a retrieval arm in real time, with the pipeline flow, safety checks, and final answer visually at each stage.</p></article>
       </div>
     </section>
   </main>

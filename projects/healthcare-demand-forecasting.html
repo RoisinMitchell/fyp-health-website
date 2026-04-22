@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
         <p class="eyebrow">Stage 05 | Supporting Healthcare Systems</p>
         <h1>Healthcare Demand Forecasting: Predicting Patient Length of Stay for Different Diseases in Irish Hospitals</h1>
         <p class="student-name">Muadh Muhsin Zibiri</p>
-        <p class="lede">A forecasting model aimed at predicting patient length of stay across diseases to help hospitals plan capacity more effectively.</p>
+        <p class="lede">Rough estimates of how long people are likely to stay at hospitals can help with bed allocation, staffing, and patient flow. This project builds a model that predicts length of stay in days from routine visit information. Instead of relying on a single algorithm, it uses a Super Learner: several models learn from the data, then a second stage learns how to combine them fairly using cross-validation. There is also a web page where you upload a spreadsheet of patients to see predictions and a quick chart of predicted length of stay.</p>
         <div class="project-actions">
           <a class="button button-primary" href="../index.html#supporting-healthcare-systems">Back to category</a>
           <a class="button button-secondary" href="../index.html">All projects</a>
@@ -49,12 +49,12 @@
       <div class="section-heading">
         <p class="eyebrow">Project Snapshot</p>
         <h2>Planning capacity with better forecasts</h2>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This placeholder summary can later be replaced with final forecasting results, methodology notes, and healthcare planning implications.</p>
+        <p class="section-text">Hospitals need a sense of how long cases will tie up space. In a busy emergency department, small errors in expectation add up across beds and staffing. Length of stay links what we know at arrival to pressure on the whole department.<br><br>Several base predictors learn patterns in the data. They are trained inside folds, and the predictions used to train the combiner are out-of-fold, so they behave more like real forecasting than memorising. Ridge regression combines those predictions, and preprocessing stays inside the same folds so the scores stay honest. The evaluation looks at usual error measures but also long-tail behaviour, because a few very long stays drive crowding and a single average can hide problems. Training and testing use the public MIMIC-IV-ED emergency dataset. It is large and well documented, which supports fair and reproducible results.<br><br>There is also a small web app. You match a template, upload a file, and get predicted stays, an above-median style flag, and a histogram so a cohort is easy to interpret, not just a list of numbers. </p>
       </div>
       <div class="detail-grid">
-        <article class="detail-item"><h3>Focus</h3><p>Length-of-stay forecasting to support operational planning in Irish hospitals.</p></article>
-        <article class="detail-item"><h3>Audience</h3><p>Hospital planners, analysts, and clinicians interested in better-informed capacity decisions.</p></article>
-        <article class="detail-item"><h3>Demo Day Angle</h3><p>An overview of the forecasting model, the problem space, and the planning benefits of stronger predictions.</p></article>
+        <article class="detail-item"><h3>Focus</h3><p>Predicting length of stay with a properly cross-validated Super Learner and show it working end-to-end through a simple web upload.</p></article>
+        <article class="detail-item"><h3>Audience</h3><p>Health services providers, Hospital administrators and technical viewers who want to see validation done sensibly, not just a flashy accuracy figure.</p></article>
+        <article class="detail-item"><h3>Demo</h3><p>Walking people through the live site: grab the template, upload a csv file, show the predicted length of stay (LOS), the weighting across models, and the chart, then connect that to why LOS matters in Ireland.</p></article>
       </div>
     </section>
   </main>

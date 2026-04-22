@@ -8,7 +8,7 @@
     name="description"
     content="Explore the Final Year Project Demo Day 2026 showcase across six Health Journey categories and fifteen student projects."
   >
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -32,6 +32,7 @@
 
       <nav class="primary-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#overview">Overview</a>
+        <a href="#video">Video</a>
         <a href="#staying-healthy">Staying Healthy</a>
         <a href="#detecting-health-issues">Detecting Health Issues</a>
         <a href="#understanding-conditions">Understanding Conditions</a>
@@ -80,7 +81,7 @@
             alt="Poster for the Final Year Project Demo Day 2026"
           >
           <figcaption class="poster-caption">
-            <a class="button button-secondary" href="assets/DEMO DAY POSTER.png">View poster</a>
+            <a class="button button-primary" href="assets/DEMO DAY POSTER.png">View poster</a>
           </figcaption>
         </figure>
       </aside>
@@ -94,41 +95,48 @@
         </div>
         <div class="stage-links">
           <a class="stage-link" href="#staying-healthy" style="--stage-color: var(--stage-1);">
-            <span class="stage-number">01</span>
+            <span class="stage-number">1</span>
             <span class="stage-label">Staying Healthy</span>
           </a>
           <a class="stage-link" href="#detecting-health-issues" style="--stage-color: var(--stage-2);">
-            <span class="stage-number">02</span>
+            <span class="stage-number">2</span>
             <span class="stage-label">Detecting Health Issues</span>
           </a>
           <a class="stage-link" href="#understanding-conditions" style="--stage-color: var(--stage-3);">
-            <span class="stage-number">03</span>
+            <span class="stage-number">3</span>
             <span class="stage-label">Understanding Conditions</span>
           </a>
           <a class="stage-link" href="#care-access-coordination" style="--stage-color: var(--stage-4);">
-            <span class="stage-number">04</span>
+            <span class="stage-number">4</span>
             <span class="stage-label">Care Access &amp; Coordination</span>
           </a>
           <a class="stage-link" href="#supporting-healthcare-systems" style="--stage-color: var(--stage-5);">
-            <span class="stage-number">05</span>
+            <span class="stage-number">5</span>
             <span class="stage-label">Supporting Healthcare Systems</span>
           </a>
           <a class="stage-link" href="#recovery-ongoing-care" style="--stage-color: var(--stage-6);">
-            <span class="stage-number">06</span>
+            <span class="stage-number">6</span>
             <span class="stage-label">Recovery &amp; Ongoing Care</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="container intro-strip" aria-labelledby="intro-title">
-      <p class="eyebrow">Demo Day Overview</p>
-      <h2 id="intro-title">A curated journey through this year's showcase</h2>
-      <p>
-        The site below reflects the current set of fifteen projects shared for Demo Day. Each
-        project has its own dedicated page with placeholder summary text that can be swapped for
-        final abstracts later.
-      </p>
+    <section class="container video-feature" id="video" aria-label="Showcase video">
+      <video
+        class="video-player"
+        controls
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/DEMO DAY POSTER.png"
+      >
+        <source src="assets/Health Group - Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        <a href="assets/Health Group - Video.mp4">Download the video</a> instead.
+      </video>
     </section>
 
     <div class="container category-stack">
@@ -402,7 +410,7 @@
           </article>
 
           <article class="project-card">
-            <p class="student-label">Roisin Mitchell</p>
+            <p class="student-label">Róisín Mitchell</p>
             <h3><a href="projects/safe-addiction-recovery-support.html">Multi-Agent AI System for Safe Addiction Recovery Support</a></h3>
             <p>
               A multi-agent support concept focused on structured, safety-aware assistance during recovery journeys.

@@ -141,8 +141,8 @@ dl {
 
 .primary-nav a:hover,
 .primary-nav a:focus-visible {
-  background: rgba(45, 127, 75, 0.1);
-  color: var(--stage-1);
+  background: color-mix(in srgb, var(--page-stage-color, #b34848) 14%, transparent);
+  color: var(--page-stage-color, #b34848);
   transform: translateY(-1px);
 }
 
@@ -171,7 +171,7 @@ dl {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   gap: 2rem;
-  align-items: center;
+  align-items: end;
   padding: 4rem 0 2.5rem;
 }
 
@@ -214,14 +214,14 @@ dl {
 }
 
 .button-primary {
-  background: var(--stage-1);
+  background: #b34848;
   color: #fff;
-  box-shadow: 0 16px 30px rgba(45, 127, 75, 0.2);
+  box-shadow: 0 16px 30px rgba(33, 33, 61, 0.15);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #24663c;
+  background: #933636;
 }
 
 .button-secondary {
@@ -301,10 +301,38 @@ dl {
   font-size: 0.95rem;
 }
 
-.poster-caption a,
+.poster-caption a:not(.button),
 .card-link {
-  color: var(--accent);
+  color: #b34848;
   font-weight: 700;
+}
+
+.project-card .card-link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.video-feature {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: #000;
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+@media (max-width: 780px) {
+  .video-player {
+    max-width: 100%;
+  }
 }
 
 .journey-bar {
@@ -339,7 +367,10 @@ dl {
 .stage-link {
   display: grid;
   gap: 0.55rem;
-  padding: 1rem;
+  padding: 1.25rem 1rem 1rem;
+  align-content: start;
+  justify-items: center;
+  text-align: center;
   border-radius: 22px;
   background: var(--surface);
   box-shadow: inset 0 0 0 1px rgba(116, 108, 98, 0.12);
@@ -358,11 +389,14 @@ dl {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.7rem;
-  height: 2.7rem;
+  align-self: center;
+  justify-self: center;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 999px;
   background: var(--stage-color);
   color: #fff;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -386,6 +420,10 @@ dl {
   color: var(--muted);
 }
 
+.section-text {
+  margin: 1.25rem 0;
+}
+
 .category-stack {
   display: grid;
   gap: 1.8rem;
@@ -406,7 +444,7 @@ dl {
 }
 
 .category-logo {
-  width: 124px;
+  width: 160px;
   flex-shrink: 0;
 }
 
@@ -468,7 +506,10 @@ dl {
 }
 
 .project-card h3 a:hover,
-.project-card h3 a:focus-visible,
+.project-card h3 a:focus-visible {
+  color: var(--stage-color);
+}
+
 .breadcrumbs a:hover,
 .breadcrumbs a:focus-visible {
   color: var(--accent);
@@ -541,12 +582,12 @@ dl {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
   gap: 2rem;
-  align-items: center;
+  align-items: start;
   border-top: 8px solid var(--page-stage-color);
 }
 
 .project-copy h1 {
-  font-size: clamp(2.4rem, 4vw, 4.3rem);
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
 }
 
 .student-name {
@@ -555,6 +596,7 @@ dl {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  margin-top: 1.25rem;
 }
 
 .project-actions {
@@ -564,24 +606,32 @@ dl {
   margin-top: 1.5rem;
 }
 
+.project-actions .button-primary {
+  background: var(--page-stage-color);
+}
+
+.project-actions .button-primary:hover,
+.project-actions .button-primary:focus-visible {
+  background: var(--page-stage-color);
+  filter: brightness(0.88);
+}
+
 .project-visual {
-  margin: 0;
-  padding: 1.5rem;
-  border-radius: 26px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 236, 226, 0.92));
-  border: 1px solid rgba(116, 108, 98, 0.16);
+  margin: 2.25rem 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
   text-align: center;
 }
 
 .project-visual img {
-  width: min(100%, 260px);
+  width: min(100%, 360px);
   margin: 0 auto;
+  display: block;
 }
 
 .project-visual figcaption {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.95rem;
+  display: none;
 }
 
 .details-section {
