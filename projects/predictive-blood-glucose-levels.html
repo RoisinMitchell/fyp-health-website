@@ -34,7 +34,7 @@
         <p class="eyebrow">Stage 02 | Detecting Health Issues</p>
         <h1>Predictive Modelling of Blood Glucose Levels in Type 1 Diabetes Using Machine Learning</h1>
         <p class="student-name">Mohamed Islam</p>
-        <p class="lede">A machine learning project focused on forecasting glucose trends in type 1 diabetes to support safer decisions.</p>
+        <p class="lede">This project is a machine learning web application that predicts a person's blood glucose level 30, 45, and 60 minutes into the future, using Continuous Glucose Monitor (CGM) readings along with insulin dose and carbohydrate intake information. It is designed for people with Type 1 Diabetes, who currently have to mentally estimate where their glucose is heading based on a trend arrow and personal intuition. The application retrieves live CGM data from the user's own Nightscout instance and displays the resulting forecasts with confidence bands, as well as a history view that validates past predictions against the actual readings that followed.</p>
         <div class="project-actions">
           <a class="button button-primary" href="../index.html#detecting-health-issues">Back to category</a>
           <a class="button button-secondary" href="../index.html">All projects</a>
@@ -49,12 +49,12 @@
       <div class="section-heading">
         <p class="eyebrow">Project Snapshot</p>
         <h2>Forecasting change before it happens</h2>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. This placeholder summary can later be replaced with the final model approach, data considerations, and evaluation results.</p>
+        <p class="section-text"> People with Type 1 Diabetes manage their condition by balancing insulin against food intake, physical activity, and several other factors throughout the day. Many of these day-to-day decisions, such as determining how much insulin to administer for a meal or whether to apply a correction dose while an earlier bolus is still active, require the user to mentally project their glucose trajectory 30 to 60 minutes into the future. While modern CGM devices provide a current reading and a basic trend arrow, they do not produce an actual forecast that takes an individual's recent glucose behaviour into account. This project aims to address that gap.<br><br>The system is built around three XGBoost models trained on the AZT1D public dataset, with one model per prediction horizon. The feature set includes recent glucose history, short-term deltas, acceleration, basal rate, and time-of-day encoding. A pharmacokinetic correction layer is then applied on top of the machine learning prediction, in order to account for insulin still active in the body and carbohydrates still being absorbed. Every prediction is logged and subsequently validated against the actual CGM reading at the target time, allowing the user to observe how accurate the model has been for them specifically. Accuracy is reported using the Clarke Error Grid, which is the standard clinical metric in diabetes research. </p>
       </div>
       <div class="detail-grid">
-        <article class="detail-item"><h3>Focus</h3><p>Predictive modelling for short-term blood glucose trends in a diabetes-management context.</p></article>
-        <article class="detail-item"><h3>Audience</h3><p>People interested in decision-support tools for monitoring and managing type 1 diabetes.</p></article>
-        <article class="detail-item"><h3>Demo</h3><p>A walkthrough of the prediction concept, input data, and how outputs could support timely interventions.</p></article>
+        <article class="detail-item"><h3>Focus</h3><p>Applying machine learning to predict short-term future blood glucose levels for people with Type 1 Diabetes, with clinically meaningful accuracy reporting.</p></article>
+        <article class="detail-item"><h3>Audience</h3><p>Individuals with Type 1 Diabetes who already use a CGM and would benefit from informed glucose forecasts beyond the basic trend arrow provided by existing devices.</p></article>
+        <article class="detail-item"><h3>Demo</h3><p>A live demonstration of the web application connected to a real Nightscout instance, showing predictions being generated in real time, the confidence bands and trend arrow output, and the history view where past predictions have been validated against subsequent CGM readings.</p></article>
       </div>
     </section>
   </main>
